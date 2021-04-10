@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        body {
+            padding: 2.5% 5% 2.5% 5%;
+            background-color: #2c2f33;
+            font-family: 'Roboto', sans-serif;
+            color: #d8d3d3;
+        }
+        code {
+            color: white;
+            background-color: #23272a;
+            border: 1px solid rgba(0,0,0,0);
+            border-radius: 3px;
+            padding: .2em;
+        }
+        .treeview {
+            margin-top: 0.3em;
+        }
+        .treeview ul, .treeview li {
+            list-style-image: none;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .treeview li li {
+            position: relative;
+            padding-left: 13px;
+            margin-left: 7px;
+            border-left: 1px solid #636363;
+        }
+        .treeview li li:last-child:not(.treeview-continue)::before {
+            border-left: 1px solid #636363;
+            width: 10px;
+        }
+        .treeview li li::before {
+            content:"";
+            position:absolute;
+            top:0;
+            left:-1px;
+            width:11px;
+            height:11px;
+            border-bottom:1px solid #636363;
+        }
+        .sprite {
+            display: inline-block;
+            vertical-align: text-top;
+            background-repeat: no-repeat;
+        }
+        .nbt-sprite {
+            background-image: url("https://static.wikia.nocookie.net/minecraft_gamepedia/images/d/d0/Nbtsheet.png/revision/latest");
+            background-size: 64px auto;
+            height: 16px;
+            width: 16px;
+        }
+        .nowrap {
+            white-space: nowrap;
+        }
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="treeview">
+        <h1>Hello World</h1>
+        <!-- <ul> <li> <span title="Compound"> <span class="sprite nbt-sprite"></span> </span> Menu <ul> <li> <span title="Boolean"> <span class="sprite nbt-sprite"></span> </span> <span class="nowrap bold">replace</span>: Optionnal. Wheter or not contents of this tag should completely replace tag contents from different lower priority data packs with the same namespace ID. </li><li> <span title="List"> <span class="sprite nbt-sprite"></span> </span> <span class="nowrap bold">values</span>: A list of mix and mathc of object names and tag names. For tags, recursive reference is posssible, but a circular reference causes a loading failure. <ul> <li> <span title="String"> <span class="sprite nbt-sprite"></span> </span> <span class="nowrap bold"></span>: An object's <a href="http://google.com" target="_blank">namespaced ID</a> in the form <code>/trigger function</code> </li></ul> </li></ul> </li></ul> -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="documentation/utils.js"></script>
+    <script src="documentation/objects.js"></script>
+    <script>
+        $('document').ready(() => {
+            // $('.treeview').append(`
+            // <ul>
+            //     <li>
+            //         <span title="${object.type ? object.type : "None"}">
+            //             <span class="sprite nbt-sprite"></span>
+            //         </span>
+            //         <span class="nowrap bold">${object.name}</span>: ${object.description}
+            //     </li>
+            // </ul>`)
+            // alert("yes")
+            appendElement($('.treeview'), Menu)
+            $('.treeview').append("<hr>")
+            appendElement($('.treeview'), Items)
+            elements = $('.sprite')
+            for (i = 0; i < elements.length; i++) {
+                pos = index[$(elements[i]).parent().attr("title")];
+                x = -pos[0] * 16;
+                y = -pos[1] * 16;
+                $(elements[i]).css("background-position", `${x}px ${y}px`)
+            }
+        })
+    </script>
+</body>
+</html>

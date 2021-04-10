@@ -1,0 +1,13 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "id": "#core:1.16",
+            "required": true
+        },
+        {
+            "id": "#core:1.17",
+            "required": false
+        }
+    ]
+}
