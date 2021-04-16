@@ -85,6 +85,7 @@ function getFunctions(items,score=1){
         console.log(score);
         obj = items[i]
         if(obj.action && obj.action.open) _function = [`function core:menu/open/${obj.action.open}`]
+        if(obj.action && obj.action.close) _function = [`function core:menu/close`]
         if(obj.action && obj.action.function) _function.splice(_function.length > 1 ? -4 : -1, 0, `function ${obj.action.function}`)
         functions.push({name: `core:menu/click/${score}/${x}`, function: _function.join("\n")})
     }
