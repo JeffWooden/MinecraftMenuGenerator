@@ -31,7 +31,8 @@ Items = {
                 {
                     name:"action",description:"Répertorie toutes les actions à effectuer sur un objet cliqué",type:"Compound",content:[
                         {name:"function",description:"Fonction à exécuter lorsque l'objet est cliqué",type:"String"},
-                        {name:"open",descrption:"Index du menu à ouvrir",type:"Int"},
+                        {name:"open",description:"Index du menu à ouvrir",type:"Int"},
+                        {name:"close",description:"Si activé, ferme le menu",type:"Boolean"},
                         {name:"loottable",description:"Loot table à accorder une fois l'object cliqué",type:"String"}
                     ]
                 }
