@@ -47,3 +47,18 @@ nav { background-color: var(--two); color: var(--six); }
 .grid { width: 36px; height: 36px; position: relative; text-align: center!important; background-color: #8b8b8b; border-color: #373737 #fff #fff #373737; border-style: solid; border-width: 2px; vertical-align: middle; cursor: pointer; }
 .grid.active { background-color: rgb(218, 218, 218); }
 .grid > img { width: 32px; height: 32px; image-rendering: pixelated; }
+
+
+    /* Components */
+        /* Upper */
+#upper { max-height: 50%; }
+
+            /* Menu selector */
+#menu-selector { background-color: var(--three); color: var(--high-emphasis); }
+#menu-selector ul li .badge { background-color: var(--blue);}
+#menu-selector .list-group-item { background-color: var(--four); color: var(--medium-emphasis)}
+#menu-selector .list-group-item:hover { cursor: pointer;}
+#menu-selector .list-group-item.active { background-color: var(--five); color: var(--high-emphasis); border: 1px solid var(--six)}
+
+
+    /* Animations */
