@@ -28,22 +28,21 @@
     /* Elements */
 body {
     background-color: var(--one);
-    color: var(--four);
+    color: var(--high-emphasis);
     font-family: 'Montserrat', sans-serif;
 }
 img { image-rendering: pixelated; image-rendering: -moz-crisp-edges; }
-a { color: var(--six); }
+a { color: var(--high-emphasis); }
 a:hover { color: var(--five); }
 
     /* Navbar */
-nav { background-color: var(--two); color: var(--six); }
+nav { background-color: var(--two); color: var(--high-emphasis); }
 
     /* Pagination */
-.page-item a { background-color: var(--three); border: 1px solid var(--four); color: var(--six); }
+.page-item a { background-color: var(--three); border: 1px solid var(--four); color: var(--high-emphasis); }
 .page-item a:hover { background-color: var(--five); border: 1px solid var(--four); color: var(--one); }
 .page-item a:active { background-color: var(--five); border: 1px solid var(--four); color: var(--one); }
 .page-item a:focus { background-color: var(--five); border: 1px solid var(--four); color: var(--one); }
-.page-item.active .page-link { background-color: var(--five); border: 1px solid var(--four); color: var(--one); }
 
     /* Minecraft styled inventory grid */
 .inventory { display: block; }
