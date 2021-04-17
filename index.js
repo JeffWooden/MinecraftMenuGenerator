@@ -1,3 +1,15 @@
+function convertNbt(nbt){
+    nbt = nbt.replace(/([0-9]+)b/gm, `$1`).replace(/({|,)\s*([a-zA-Z0-9]+):/gm, `$1"$2":`).replace(/\[I;(\s*-*[0-9]+),(\s*-*[0-9]+),(\s*-*[0-9]+),(\s*-*[0-9]+)\]/gm, `[$1,$2,$3,$4]`)
+    regex = /'([^']*)'/gm
+    while ((m = regex.exec(nbt)) !== null) {
+      if (m.index === regex.lastIndex) {
+          regex.lastIndex++;
+      }
+      nbt = nbt.replace(m[0],m[0].replace(/"/g,'\\"').replace(/'/g,'"'))
+    }
+    return nbt
+}
+
 function loadItems(items){
     return JSON.parse(convertNbt(items)).sort((a,b) => (a.Slot > b.Slot) ? 1 : ((b.Slot > a.Slot) ? -1 : 0))
 }
@@ -26,18 +38,6 @@ function getLootTable(items){
         out.functions.push({function: "minecraft:set_nbt", tag: JSON.stringify(obj.tag)})
     }
     return `{"pools":${JSON.stringify(loottable).replace(/\[(\s*-*[0-9]+),(\s*-*[0-9]+),(\s*-*[0-9]+),(\s*-*[0-9]+)\]/gm, `[I;$1,$2,$3,$4]`)}}`
-}
-
-function convertNbt(nbt){
-    nbt = nbt.replace(/([0-9]+)b/gm, `$1`).replace(/({|,)\s*([a-zA-Z0-9]+):/gm, `$1"$2":`).replace(/\[I;(\s*-*[0-9]+),(\s*-*[0-9]+),(\s*-*[0-9]+),(\s*-*[0-9]+)\]/gm, `[$1,$2,$3,$4]`)
-    regex = /'([^']*)'/gm
-    while ((m = regex.exec(nbt)) !== null) {
-      if (m.index === regex.lastIndex) {
-          regex.lastIndex++;
-      }
-      nbt = nbt.replace(m[0],m[0].replace(/"/g,'\\"').replace(/'/g,'"'))
-    }
-    return nbt
 }
 
 function getAdvancement(items,score=1){
