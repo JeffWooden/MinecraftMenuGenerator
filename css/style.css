@@ -35,6 +35,13 @@ a:hover { color: var(--five); }
     /* Navbar */
 nav { background-color: var(--two); color: var(--six); }
 
+    /* Pagination */
+.page-item a { background-color: var(--three); border: 1px solid var(--four); color: var(--six); }
+.page-item a:hover { background-color: var(--five); border: 1px solid var(--four); color: var(--one); }
+.page-item a:active { background-color: var(--five); border: 1px solid var(--four); color: var(--one); }
+.page-item a:focus { background-color: var(--five); border: 1px solid var(--four); color: var(--one); }
+.page-item.active .page-link { background-color: var(--five); border: 1px solid var(--four); color: var(--one); }
+
     /* Minecraft styled inventory grid */
 .inventory { display: block; }
 .grid { width: 36px; height: 36px; position: relative; text-align: center!important; background-color: #8b8b8b; border-color: #373737 #fff #fff #373737; border-style: solid; border-width: 2px; vertical-align: middle; cursor: pointer; }
