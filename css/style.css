@@ -2,12 +2,15 @@
 
     /* Color palette */
 :root {
-    --one: #1D1D2E;
-    --two: #39394B;
-    --three: #535A63;
-    --four: #8F9093;
-    --five: #ADABAB;
-    --six: #cac6c2;
+    --one: hsl(0, 0%, 6%);
+    --two: hsl(0, 0%, 12%);
+    --three: hsl(0, 0%, 18%);
+    --four: hsl(0, 0%, 24%);
+    --five: hsl(0, 0%, 30%);
+    --six: hsl(0, 0%, 36%);
+    --high-emphasis: hsla(0, 0%, 100%, 0.502);
+    --medium-emphasis: hsla(0, 0%, 100%, 0.376);
+    --disabled: #FFFFFF38;
     --red: #A65658;
     --orange: #DE9D75;
     --gold: #F0D898;
