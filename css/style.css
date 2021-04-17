@@ -33,7 +33,11 @@ body {
 }
 img { image-rendering: pixelated; image-rendering: -moz-crisp-edges; }
 a { color: var(--high-emphasis); }
-a:hover { color: var(--five); }
+a:hover { color: var(--medium-emphasis); }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--three); }
+::-webkit-scrollbar-thumb { background: var(--four); }
+::-webkit-scrollbar-thumb:hover { background: var(--five);  }
 
     /* Navbar */
 nav { background-color: var(--two); color: var(--high-emphasis); }
