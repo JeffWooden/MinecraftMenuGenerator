@@ -12,6 +12,10 @@
 body {
     background-color: var(--one);
     color: var(--four);
-    padding: 20px 0px 20px 0px;
     font-family: 'Montserrat', sans-serif;
 }
+
+img { image-rendering: pixelated; image-rendering: -moz-crisp-edges; }
+nav { background-color: var(--two); color: var(--six); }
+nav a { color: var(--six); }
+nav a:hover { color: var(--five); }
