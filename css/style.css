@@ -56,11 +56,11 @@ nav { background-color: var(--two); color: var(--high-emphasis); }
 #upper { max-height: 50%; }
 
             /* Menu selector */
-#menu-selector { background-color: var(--three); color: var(--high-emphasis); }
-#menu-selector ul li .badge { background-color: var(--blue);}
-#menu-selector .list-group-item { background-color: var(--four); color: var(--medium-emphasis)}
-#menu-selector .list-group-item:hover { cursor: pointer;}
-#menu-selector .list-group-item.active { background-color: var(--five); color: var(--high-emphasis); border: 1px solid var(--six)}
+#page-selector { background-color: var(--three); color: var(--high-emphasis); }
+#page-selector ul li .badge { background-color: var(--blue);}
+#page-selector .list-group-item { background-color: var(--four); color: var(--medium-emphasis)}
+#page-selector .list-group-item:hover { cursor: pointer;}
+#page-selector .list-group-item.active { background-color: var(--five); color: var(--high-emphasis); border: 1px solid var(--six)}
 
 
     /* Animations */
