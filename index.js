@@ -50,11 +50,7 @@ function getAdvancement(items,score=1){
         advancement = {"parent":"core:menu/click","criteria":{"requirement":{"trigger":"minecraft:inventory_changed","conditions":{"player":[{"condition":"minecraft:entity_scores","entity":"this","scores":{"menu.page":{"min":1,"max":1}}},{"condition":"minecraft:inverted","term":{"condition":"minecraft:entity_properties","entity":"this","predicate":{"nbt":"{Slot:1b,tag:{}}"}}}]}}}}
         advancement.rewards = {}
         advancement.rewards.function = `core:menu/click/${score}/${x}`
-        if(obj.action){
-          if(obj.action.loot) advancement.rewards.loot = obj.action.loot
-          if(obj.action.recipes) advancement.rewards.recipes = obj.action.recipes
-          if(obj.action.experience) advancement.rewards.experience = obj.action.experience
-        }
+        if(obj.action && obj.action.recipe) advancement.rewards.recipes = obj.action.recipes
         advancement.criteria.requirement.conditions.player[0].scores["menu.page"].min = score
         advancement.criteria.requirement.conditions.player[0].scores["menu.page"].max = score
         advancement.criteria.requirement.conditions.player[1].term.predicate.nbt = `{Inventory:[{Slot: ${obj.Slot}b,tag:{menuid: ${x}}}]}`

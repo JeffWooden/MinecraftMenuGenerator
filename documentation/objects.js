@@ -30,10 +30,10 @@ Items = {
                 },
                 {
                     name:"action",description:"Répertorie toutes les actions à effectuer sur un objet cliqué",type:"Compound",content:[
-                        {name:"function",description:"Fonction à exécuter lorsque l'objet est cliqué",type:"String"},
-                        {name:"open",description:"Index du menu à ouvrir",type:"Int"},
-                        {name:"close",description:"Si activé, ferme le menu",type:"Boolean"},
-                        {name:"loottable",description:"Loot table à accorder une fois l'object cliqué",type:"String"}
+                        {name:"recipe",description:"Recette à donner une fois l'object cliqué.",type:"String"},
+                        {name:"function",description:"Fonction à exécuter lorsque l'objet est cliqué.",type:"String"},
+                        {name:"open",description:"Index du menu à ouvrir.",type:"Int"},
+                        {name:"close",description:"Si activé, ferme le menu. <strong>Attention</strong>, si l'action <code>open</code> est remplie, <code>close</code> prévaut sur cette dernière.<br>Vous pouvez toutefois remplir les actions <code>recipe</code> et <code>function</code>.",type:"Boolean"}
                     ]
                 }
             ]
