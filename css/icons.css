@@ -44,3 +44,6 @@
 .icon-plus:before {
   content: "\ea0a";
 }
+.icon-minus:before {
+  content: "\ea0b";
+}
