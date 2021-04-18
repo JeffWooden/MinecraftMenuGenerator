@@ -49,9 +49,9 @@ function load(){
     for(i=0;i<4;i++){
         line = i == 3 ? 0 : i+1
         $("#slots-grid").append(`
-        <div class="d-flex grid-item" line="${line}"></div>
+        <div class="d-flex grid-item slots-line${line == 0 ? " mt-3" : ""}" line="${line}"></div>
         `)
-        cursor = $("#slots-grid").last()
+        cursor = $("#slots-grid .slots-line").last()
         for(j=0;j<9;j++){
             slot = 9*line + i;
             cursor.append(`
