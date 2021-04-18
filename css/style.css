@@ -35,7 +35,10 @@ a:hover { color: var(--medium-emphasis); }
 ::-webkit-scrollbar-track { background: var(--three); }
 ::-webkit-scrollbar-thumb { background: var(--four); }
 ::-webkit-scrollbar-thumb:hover { background: var(--five);  }
-.badge { background-color: var(--high-emphasis); color: var(--three)}
+.badge { background-color: var(--blue); color: var(--high-emphasis)}
+.btn {color: var(--high-emphasis); background-color: var(--light-blue); border-color: var(--light-blue)}
+.btn.btn-validate {background-color: var(--green); border-color: var(--green);}
+.btn:hover { color: var(--medium-emphasis); }
 
     /* Navbar */
 nav { background-color: var(--two); color: var(--high-emphasis); }
