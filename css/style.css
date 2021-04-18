@@ -32,7 +32,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 img { image-rendering: pixelated; image-rendering: -moz-crisp-edges; }
-a { color: var(--high-emphasis); }
+a { color: var(--high-emphasis); text-decoration: none;}
 a:hover { color: var(--medium-emphasis); }
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--three); }
