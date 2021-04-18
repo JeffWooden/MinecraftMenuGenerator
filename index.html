@@ -96,9 +96,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6" id="actions" style="background-color: var(--purple);">
+                <div class="col-sm-6" id="actions">
                     <h2>Actions</h2>
+                    <div class="container">
+                        <div class="d-flex flex-column gap-3 mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text">Recette</span>
+                                <input type="text" class="form-control" placeholder="minecraft:blackstone_wall">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-text">Function</span>
+                                <input type="text" class="form-control" placeholder="namespace:foobar">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-text">Ouvrir la page n°</span>
+                                <input type="number" class="form-control" min="0" placeholder="&quot;0&quot; pour n'ouvrir aucune page">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-text">Fermer le menu</span>
+                                <select class="form-select sm">
+                                    <option value="true">Oui</option>
+                                    <option value="false" selected>Non</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <button class="btn mt-2 mb-2 col-sm-2">Enregistrer</button>
             </div>
         </div>
     </div>
