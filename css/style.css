@@ -38,6 +38,7 @@ a:hover { color: var(--medium-emphasis); }
 ::-webkit-scrollbar-track { background: var(--three); }
 ::-webkit-scrollbar-thumb { background: var(--four); }
 ::-webkit-scrollbar-thumb:hover { background: var(--five);  }
+.badge { background-color: var(--high-emphasis); color: var(--three)}
 
     /* Navbar */
 nav { background-color: var(--two); color: var(--high-emphasis); }
@@ -59,11 +60,10 @@ nav { background-color: var(--two); color: var(--high-emphasis); }
         /* Upper */
 #upper { max-height: 50%; }
             /* Inventory */
-#inventory {padding: 20px 0px 20px 0px;}
+#inventory {padding: 20px 0px 20px 0px; background-color: var(--one);}
             /* Menu selector */
-#page-selector { background-color: var(--three); color: var(--high-emphasis);}
+#page-selector { background-color: var(--three); color: var(--high-emphasis); padding: 10px 20px;}
 #page-selector ul {max-height: 50vh; overflow-y:scroll;}
-#page-selector ul li .badge { background-color: var(--blue);}
 #page-selector ul li a { text-decoration: none;}
 #page-selector .list-group-item { background-color: var(--four); color: var(--medium-emphasis)}
 #page-selector .list-group-item:hover { cursor: pointer;}
