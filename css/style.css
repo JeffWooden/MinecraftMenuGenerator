@@ -40,9 +40,8 @@ a:hover { color: var(--medium-emphasis); }
 .btn {color: var(--white-emphasis); background-color: var(--light-blue); border-color: var(--light-blue)}
 .btn.btn-validate {background-color: var(--green); border-color: var(--green);}
 .btn:hover { color: var(--medium-emphasis); }
-.form-select { background-color: var(--five); border: 1px solid var(--four); color: var(--white-emphasis)}
-.input-group-text { background-color: var(--three); border: 1px solid var(--three); color: var(--high-emphasis) }
-.form-control { background-color: var(--five); border: 1px solid var(--four); color: var(--white-emphasis)}
+.input-group-text, .form-select.form-control { background-color: var(--three); border: 1px solid var(--three); color: var(--high-emphasis) }
+.form-control, .form-select { background-color: var(--five); border: 1px solid var(--four); color: var(--white-emphasis)}
 .form-control:focus { background-color: var(--five); border: 1px solid var(--four); color: var(--white-emphasis)}
 
     /* Navbar */
