@@ -58,7 +58,7 @@ nav { background-color: var(--two); color: var(--high-emphasis); }
 
     /* Components */
         /* Upper */
-#upper { max-height: 50%; }
+#upper { min-height: 50vh; }
             /* Inventory */
 #inventory {padding: 20px 0px 20px 0px; background-color: var(--one);}
             /* Menu selector */
