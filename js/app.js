@@ -53,7 +53,7 @@ function load(){
         `)
         cursor = $("#slots-grid .slots-line").last()
         for(j=0;j<9;j++){
-            slot = 9*line + i;
+            slot = 9*line + j;
             cursor.append(`
             <span class="grid" slot="${slot}"><img src="./img/textures/creeper_banner_pattern.png" alt=""></span>
             `)
