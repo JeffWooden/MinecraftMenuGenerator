@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
     /* Color palette */
 :root {
     --one: hsl(0, 0%, 6%);
@@ -27,9 +25,8 @@
 
     /* Elements */
 body {
-    background-color: var(--one);
+    background-color: var(--four);
     color: var(--high-emphasis);
-    font-family: 'Montserrat', sans-serif;
 }
 img { image-rendering: pixelated; image-rendering: -moz-crisp-edges; }
 a { color: var(--high-emphasis); text-decoration: none;}
