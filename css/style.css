@@ -6,6 +6,7 @@
     --four: hsl(0, 0%, 24%);
     --five: hsl(0, 0%, 30%);
     --six: hsl(0, 0%, 36%);
+    --white-emphasis: hsla(0, 0%, 100%, 0.7);
     --high-emphasis: hsla(0, 0%, 100%, 0.502);
     --medium-emphasis: hsla(0, 0%, 100%, 0.376);
     --disabled: #FFFFFF38;
