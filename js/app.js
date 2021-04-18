@@ -43,6 +43,14 @@ $(document).ready(() => {
 })
 
 
+function new_menu(){
+    Items = Array.from(Array(4*9).keys()).map(x => Object.create({Slot: x,id:"minecraft:air",Count:1,NBT:""}))
+    Item = Items[0]
+    Page = {index: 0, name: "Page principale", items: Items}
+    Menu.push(Page)
+    load()
+}
+
 function load(){
     $("#content").show()
     $("#slots-grid").empty()
