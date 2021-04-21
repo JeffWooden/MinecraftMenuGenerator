@@ -17,10 +17,10 @@
                 MenuGenerator
             </a>
             <div class="d-flex">
-                <a href="#" class="nav-link controls" control="new">Nouveau</a>
-                <a href="#" class="nav-link controls" control="open">Ouvrir</a>
-                <a href="#" class="nav-link controls" control="save">Enregistrer</a>
-                <a href="#" class="nav-link controls" control="export">Exporter</a>
+                <a href="#" class="nav-link controls" button="new">Nouveau</a>
+                <a href="#" class="nav-link controls" button="open">Ouvrir</a>
+                <a href="#" class="nav-link controls" button="save">Enregistrer</a>
+                <a href="#" class="nav-link controls" button="export">Exporter</a>
             </div>
         </div>
     </nav>
@@ -32,29 +32,23 @@
                         <div class="d-grid gap-3">
                             <h2>«Menu Name»</h2>
                             <div class="d-flex justify-content-center inventory">
-                                <div class="d-flex flex-column mx-auto">
+                                <div class="d-flex flex-column mx-auto" id="slots-grid">
                                     <div class="d-flex grid-item">
-                                        <span class="grid"></span>
+                                        <span class="grid"><img src="./img/textures/creeper_banner_pattern.png" alt=""></span>
                                     </div>
-                                    <div class="d-flex grid-item">
-                                        <span class="grid"></span>
-                                    </div>
-                                    <div class="d-flex grid-item">
-                                        <span class="grid"></span>
-                                    </div>
-                                    <div class="d-flex grid-item" style="margin-top: 20px;">
-                                        <span class="grid"></span>
-                                    </div>
+                                    <div class="d-flex grid-item"><span class="grid"></span></div>
+                                    <div class="d-flex grid-item"><span class="grid"></span></div>
+                                    <div class="d-flex grid-item mt-4"><span class="grid"></span></div>
                                 </div>
                             </div>
                             <ul class="pagination justify-content-center">
                                 <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
+                                    <a class="page-link" href="#" aria-label="Previous" button="previous">
                                         <span aria-hidden="true">&laquo;</span>
                                     </a>
                                 </li>
                                 <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
+                                    <a class="page-link" href="#" aria-label="Next" button="next">
                                         <span aria-hidden="true">&raquo;</span>
                                     </a>
                                 </li>
@@ -66,11 +60,11 @@
                     <div class="d-flex flex-column justify-content-center">
                         <h2>Menu Selector</h2>
                         <ul class="list-group" id="pages">
-                            <li class="list-group-item"><a href="#" class="d-flex gap-2 align-items-center"><span class="badge rounded-pill">1</span>Menu principal</a></li>
+                            <li class="list-group-item"><a href="#" class="d-flex gap-2 align-items-center" button="select-page"><span class="badge rounded-pill">1</span>Menu principal</a></li>
                         </ul>
                         <div class="d-flex mt-2 mb-2 gap-2 justify-content-between justify-content-sm-center">
-                            <a href="#" class="btn"><span class="icon icon-plus"></span></a>
-                            <a href="#" class="btn"><span class="icon icon-minus"></span></a>
+                            <a href="#" class="btn" button="add-page"><span class="icon icon-plus"></span></a>
+                            <a href="#" class="btn" button="remove-page"><span class="icon icon-minus"></span></a>
                         </div>
                     </div>
                 </div>
@@ -80,12 +74,12 @@
                     <div class="d-flex gap-2 align-items-center">
                         <h2>«Item name»</h2>
                         <span class="badge rounded-pill">Slot n°«X»</span>
-                        <a href="#"><span class="icon icon-bin" style="color: var(--red);"></span></a>
+                        <a href="#" button="remove-item"><span class="icon icon-bin" style="color: var(--red);"></span></a>
                     </div>
                     <div class="container">
                         <div class="d-flex flex-column gap-3 mb-3">
                             <div class="input-group">
-                                <select class="form-control form-select form-select-sm col-3">
+                                <select class="form-select form-control form-select-sm col-3">
                                     <option value="id" selected>Id</option>
                                     <option value="loottable">Table de butins</option>
                                 </select>
@@ -128,7 +122,7 @@
                         </div>
                     </div>
                 </div>
-                <a class="btn btn-validate mt-2 mb-2 col-sm-2" href="#">Enregistrer</a>
+                <a class="btn btn-validate mt-2 mb-2 col-sm-2" href="#" button="save-item">Enregistrer</a>
             </div>
         </div>
     </div>
@@ -138,17 +132,8 @@
     <script src="js/elements.js"></script>
     <script src="js/app.js"></script>
     <script>
-        $(function () {
-            $("#pages").sortable();
-            $("#pages").disableSelection();
-        });
 
-        $("textarea").each(function () {
-            this.setAttribute("style", "height:" + (this.scrollHeight) + "px;overflow-y:hidden;");
-        }).on("input", function () {
-            this.style.height = "auto";
-            this.style.height = (this.scrollHeight) + "px";
-        });
+        
     </script>
 </body>
 </html>

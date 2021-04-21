@@ -1,5 +1,5 @@
 var Menu;
-var Pages;
+var Page;
 var Items;
 var Item;
 
@@ -40,6 +40,8 @@ $(document).ready(() => {
         if(!shortcuts[e.key]) return console.log(`Raccourcis "Alt + ${e.key}" inconnu.`)
         $(`a[button=${shortcuts[e.key]}]`).click()
     })
+
+    $("a[button=new]").click()
 })
 
 
@@ -54,7 +56,7 @@ function new_menu(){
 function load(){
     $("#content").show()
     $("#slots-grid").empty()
-    for(i=0;i<4;i++){
+    for(i=0;i<4;i++){ // TODO: Les boucles for s'adapteront
         line = i == 3 ? 0 : i+1
         $("#slots-grid").append(`
         <div class="d-flex grid-item slots-line${line == 0 ? " mt-3" : ""}" line="${line}"></div>
