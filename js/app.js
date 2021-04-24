@@ -56,6 +56,7 @@ function new_menu(){
 
 function load(){
     $("#content").show()
+    load_pages()
     $("#slots-grid").empty()
     for(i=0;i<4;i++){ // TODO: Les boucles for s'adapteront
         line = i == 3 ? 0 : i+1
@@ -69,5 +70,14 @@ function load(){
             <span class="grid" slot="${slot}"><img src="./img/textures/creeper_banner_pattern.png" alt=""></span>
             `)
         }
+    }
+}
+
+function load_pages(){
+    $("#pages").empty()
+    for(i in Pages){
+        $("#pages").append(`
+        <li class="list-group-item"><a href="#" class="d-flex gap-2 align-items-center" button="select-page"><span class="badge rounded-pill">${Pages[i].index}</span>${Pages[i].name}</a></li>
+        `)
     }
 }
