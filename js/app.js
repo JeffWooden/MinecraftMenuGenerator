@@ -51,6 +51,7 @@ function new_menu(){
     Item = Items[0]
     Page = {index: 0, name: "Page principale", items: Items}
     Pages.push(Page)
+    Menu.name = "Menu", Menu.pages = Pages;
     load()
 }
 
@@ -58,6 +59,7 @@ function load(){
     $("#content").show()
     load_pages()
     load_slots()
+    $("#menu-name").text(Menu.name)
 }
 
 function load_pages(){
