@@ -79,19 +79,19 @@
                     <div class="container">
                         <div class="d-flex flex-column gap-3 mb-3">
                             <div class="input-group">
-                                <select class="form-select form-control form-select-sm col-3">
+                                <select class="form-select form-control form-select-sm col-3" option="type">
                                     <option value="id" selected>Id</option>
                                     <option value="loottable">Table de butins</option>
                                 </select>
-                                <input type="text" class="form-control col-9" placeholder="minecraft:stick">
+                                <input type="text" class="form-control col-9" placeholder="minecraft:stick" option="id">
                             </div>
                             <div class="input-group">
                                 <span class="input-group-text">Nombre</span>
-                                <input type="number" class="form-control" id="" min="1" max="64" placeholder="1">
+                                <input type="number" class="form-control" id="" min="1" max="64" placeholder="1" option="count">
                             </div>
                             <div class="input-group">
                                 <span class="input-group-text">NBT</span>
-                                <textarea type="text" class="form-control" placeholder="{custom:1b,foo:{bar:[666,42]},display:{Name:'{&quot;text&quot;,&quot;Un nom&quot;}',Lore:['{&quot;text&quot;:&quot;Une description&quot;}']}}"></textarea>
+                                <textarea type="text" class="form-control" placeholder="{custom:1b,foo:{bar:[666,42]},display:{Name:'{&quot;text&quot;,&quot;Un nom&quot;}',Lore:['{&quot;text&quot;:&quot;Une description&quot;}']}}" option="nbt"></textarea>
                             </div>
                         </div>
                     </div>
@@ -102,19 +102,19 @@
                         <div class="d-flex flex-column gap-3 mb-3">
                             <div class="input-group">
                                 <span class="input-group-text">Recette</span>
-                                <input type="text" class="form-control" placeholder="minecraft:blackstone_wall">
+                                <input type="text" class="form-control" placeholder="minecraft:blackstone_wall" option="recipe">
                             </div>
                             <div class="input-group">
                                 <span class="input-group-text">Function</span>
-                                <input type="text" class="form-control" placeholder="namespace:foobar">
+                                <input type="text" class="form-control" placeholder="namespace:foobar" option="function">
                             </div>
                             <div class="input-group">
                                 <span class="input-group-text">Ouvrir la page n°</span>
-                                <input type="number" class="form-control" min="0" placeholder="&quot;0&quot; pour n'ouvrir aucune page">
+                                <input type="number" class="form-control" min="0" placeholder="&quot;0&quot; pour n'ouvrir aucune page" option="open">
                             </div>
                             <div class="input-group">
                                 <span class="input-group-text">Fermer le menu</span>
-                                <select class="form-select sm">
+                                <select class="form-select sm" option="cloe">
                                     <option value="true">Oui</option>
                                     <option value="false" selected>Non</option>
                                 </select>
