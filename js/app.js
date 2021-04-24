@@ -1,5 +1,5 @@
 var Menu;
-var Pages;
+var Pages = [];
 var Page;
 var Items;
 var Item;
@@ -12,7 +12,7 @@ $(document).ready(() => {
         if(!action) return;
         switch(action){
             case "new":
-                load()
+                new_menu()
                 $("#content").show()
             case "open":
             case "save":
