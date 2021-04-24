@@ -85,7 +85,7 @@ function load_slots(){
         for(j=0;j<cols;j++){
             slot = cols*line + j;
             cursor.append(`
-            <span class="grid" slot="${slot}"><img src="./img/textures/creeper_banner_pattern.png" alt=""></span>
+            <span class="grid" slot="${slot}"><img src="./img/textures/${Items[slot].id.replace("minecraft:","")}.png" alt=""></span>
             `)
         }
     }
