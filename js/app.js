@@ -84,8 +84,11 @@ function load_slots(){
         cursor = $("#slots-grid .slots-line").last()
         for(j=0;j<cols;j++){
             slot = cols*line + j;
+            path = `./img/textures/`
+            var item = `${Items[slot].id.replace("minecraft:","")}`
+            if(!checkImage(`${path}${item}.png`)) item = "air";
             cursor.append(`
-            <span class="grid" slot="${slot}"><img src="./img/textures/${Items[slot].id.replace("minecraft:","")}.png" alt=""></span>
+            <span class="grid" slot="${slot}"><img src="${path}${item}.png" alt=""></span>
             `)
         }
     }
