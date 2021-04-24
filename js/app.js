@@ -57,20 +57,7 @@ function new_menu(){
 function load(){
     $("#content").show()
     load_pages()
-    $("#slots-grid").empty()
-    for(i=0;i<4;i++){ // TODO: Les boucles for s'adapteront
-        line = i == 3 ? 0 : i+1
-        $("#slots-grid").append(`
-        <div class="d-flex grid-item slots-line${line == 0 ? " mt-3" : ""}" line="${line}"></div>
-        `)
-        cursor = $("#slots-grid .slots-line").last()
-        for(j=0;j<9;j++){
-            slot = 9*line + j;
-            cursor.append(`
-            <span class="grid" slot="${slot}"><img src="./img/textures/creeper_banner_pattern.png" alt=""></span>
-            `)
-        }
-    }
+    load_slots()
 }
 
 function load_pages(){
@@ -79,5 +66,24 @@ function load_pages(){
         $("#pages").append(`
         <li class="list-group-item"><a href="#" class="d-flex gap-2 align-items-center" button="select-page"><span class="badge rounded-pill">${Pages[i].index}</span>${Pages[i].name}</a></li>
         `)
+    }
+}
+
+function load_slots(){
+    $("#slots-grid").empty()
+    lines = 4
+    cols = 9
+    for(i=0;i<lines;i++){ // TODO: Les boucles for s'adapteront
+        line = i == 3 ? 0 : i+1
+        $("#slots-grid").append(`
+        <div class="d-flex grid-item slots-line${line == 0 ? " mt-3" : ""}" line="${line}"></div>
+        `)
+        cursor = $("#slots-grid .slots-line").last()
+        for(j=0;j<cols;j++){
+            slot = cols*line + j;
+            cursor.append(`
+            <span class="grid" slot="${slot}"><img src="./img/textures/creeper_banner_pattern.png" alt=""></span>
+            `)
+        }
     }
 }
