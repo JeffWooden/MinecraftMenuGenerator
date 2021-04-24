@@ -1,4 +1,4 @@
-var Menu;
+var Menu = {options: {namespace: "core", version: "1.16"}};
 var Pages = [];
 var Page;
 var Items;
