@@ -60,6 +60,7 @@ function load(){
     load_pages()
     load_slots()
     $("#menu-name").text(Menu.name)
+    $("[option]").attr("disabled", "true")
 }
 
 function load_pages(){
