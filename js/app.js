@@ -121,7 +121,7 @@ function load_slots(){
 }
 
 function load_item(){
-    $("#item-name").text(Item.id); $("#item-slot").text(`Slot n°${Item.Slot}`);
+    $("#item-name").text(Item.id ? Item.id : Item.loottable); $("#item-slot").text(`Slot n°${Item.Slot}`);
     $("[option]").attr("disabled", false)
     options = ["id","Count","NBT"]
     defaults = ["minecraft:air",1,""]
