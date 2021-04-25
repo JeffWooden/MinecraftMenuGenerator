@@ -72,8 +72,8 @@
             <div class="row justify-content-center flex-grow-1 py-3" id="lower">
                 <div class="col-sm-6 px-3" id="item">
                     <div class="d-flex gap-2 align-items-center">
-                        <h2>«Item name»</h2>
-                        <span class="badge rounded-pill">Slot n°«X»</span>
+                        <h2 id="item-name">«Item name»</h2>
+                        <span class="badge rounded-pill" id="item-slot">Slot n°«X»</span>
                         <a href="#" button="remove-item"><span class="icon icon-bin" style="color: var(--red);"></span></a>
                     </div>
                     <div class="container">
@@ -87,11 +87,11 @@
                             </div>
                             <div class="input-group">
                                 <span class="input-group-text">Nombre</span>
-                                <input type="number" class="form-control" id="" min="1" max="64" placeholder="1" option="count">
+                                <input type="number" class="form-control" id="" min="1" max="64" placeholder="1" option="Count">
                             </div>
                             <div class="input-group">
                                 <span class="input-group-text">NBT</span>
-                                <textarea type="text" class="form-control" placeholder="{custom:1b,foo:{bar:[666,42]},display:{Name:'{&quot;text&quot;,&quot;Un nom&quot;}',Lore:['{&quot;text&quot;:&quot;Une description&quot;}']}}" option="nbt"></textarea>
+                                <textarea type="text" class="form-control" placeholder="{custom:1b,foo:{bar:[666,42]},display:{Name:'{&quot;text&quot;,&quot;Un nom&quot;}',Lore:['{&quot;text&quot;:&quot;Une description&quot;}']}}" option="NBT"></textarea>
                             </div>
                         </div>
                     </div>
