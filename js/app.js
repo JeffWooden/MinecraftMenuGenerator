@@ -70,6 +70,13 @@ function load_pages(){
         <li class="list-group-item"><a href="#" class="d-flex gap-2 align-items-center" action="select-page" page="${Pages[i].index}"><span class="badge rounded-pill">${Pages[i].index}</span>${Pages[i].name}</a></li>
         `)
     }
+    activePage(Page?.index)
+    $('a[action="select-page"]').click((e) => {
+        element = $(e.target)
+        if(element.parent().hasClass("active")) return console.log("Déjà actif");
+        index = parseInt(element.attr("page"))
+        activePage(index)
+    })
 }
 
 function load_slots(){
