@@ -24,6 +24,15 @@ $(document).ready(() => {
                 break
         }
     })
+    $('[option="open_boolean"]').click((e) => {
+        $('[option="open"]').prop("disabled", !$(e.currentTarget).prop("checked"))
+        $('[option="close"]').val((!$(e.currentTarget).prop("checked")).toString())
+    })
+    $('[option="close"]').on("change", (e) => {
+        value = $(e.currentTarget).val()
+        $('[option="open_boolean"]').prop("checked", !value)
+        $('[option="open"]').prop("disabled", value)
+    })
 
     // Touches raccourcis
     shortcuts = {
