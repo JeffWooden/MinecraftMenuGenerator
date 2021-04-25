@@ -26,6 +26,12 @@ function saveItems(){
     Page.items = Items
 }
 
+function saveSlot(){
+    Items[getIndexItem(Item.Slot)] = Item
+    refreshSlots()
+    SlotSaved = true;
+}
+
 function changeSlotImg(slot,item){
     url = `./img/textures/${item}.png`;
     if(!checkImage(url)) url.replace(item, "air")
