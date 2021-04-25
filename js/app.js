@@ -67,7 +67,7 @@ function load_pages(){
     $("#pages").empty()
     for(i in Pages){
         $("#pages").append(`
-        <li class="list-group-item"><a href="#" class="d-flex gap-2 align-items-center" button="select-page" page="${Pages[i].index}"><span class="badge rounded-pill">${Pages[i].index}</span>${Pages[i].name}</a></li>
+        <li class="list-group-item"><a href="#" class="d-flex gap-2 align-items-center" action="select-page" page="${Pages[i].index}"><span class="badge rounded-pill">${Pages[i].index}</span>${Pages[i].name}</a></li>
         `)
     }
 }
