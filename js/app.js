@@ -120,10 +120,25 @@ function load_slots(){
     })
 }
 
+function load_item(){
+    $("#item-name").text(Item.id); $("#item-slot").text(`Slot n°${Item.Slot}`);
+    $("[option]").attr("disabled", false)
+    options = ["id","Count","NBT"]
+    defaults = ["minecraft:air",1,""]
+    if(Item.loottable){
+        $("[option='type']").val("loottable")
+    } else {
+        $("[option='type']").val("id")
+    }
+    for(i of options){
+        $(`[option="${i}"]`).val(Item[i] ? Item[i] : defaults[options.indexOf(i)])
+    }
+}
+
 function refreshSlots(){
     Items.forEach((e) => {
         slot = Items.indexOf(e)
-        item = `${e.id.replace("minecraft:","")}`
+        item = e.id ? `${e.id.replace("minecraft:","")}` : `loottable`
         changeSlotImg(slot, item)
     })
 }
