@@ -33,6 +33,7 @@ $(document).ready(() => {
         $('[option="open_boolean"]').prop("checked", !value)
         $('[option="open"]').prop("disabled", value)
     })
+    $('[option]').on("change", (e) => { SlotSaved = false })
 
     // Touches raccourcis
     shortcuts = {
