@@ -9,3 +9,12 @@ function activePage(index){
     $('a[action="select-page"]').parent().removeClass("active")
     $('a[action="select-page"][page=' + (index) + ']').parent().addClass("active")
 }
+
+function savePage(){
+    index = Pages.indexOf(Pages.filter((e) => e.index == Page.index)[0])
+    Pages[index] = Page
+}
+
+function saveItems(){
+    Page.items = Items
+}
