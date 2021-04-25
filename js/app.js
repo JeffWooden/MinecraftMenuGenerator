@@ -73,7 +73,7 @@ function load_pages(){
     activePage(Page?.index)
     $('a[action="select-page"]').click((e) => {
         element = $(e.target)
-        if(element.parent().hasClass("active")) return console.log("Déjà actif");
+        if(element.parent().hasClass("active")) return;
         index = parseInt(element.attr("page"))
         activePage(index)
         saveItems()
