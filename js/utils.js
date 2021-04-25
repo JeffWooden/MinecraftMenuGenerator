@@ -21,3 +21,9 @@ function savePage(){
 function saveItems(){
     Page.items = Items
 }
+
+function changeSlotImg(slot,item){
+    url = `./img/textures/${item}.png`;
+    if(!checkImage(url)) url.replace(item, "air")
+    $(`.grid[slot="${slot}"] > img`).attr("src", url)
+}

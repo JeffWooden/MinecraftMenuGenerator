@@ -96,12 +96,11 @@ function load_slots(){
         cursor = $("#slots-grid .slots-line").last()
         for(j=0;j<cols;j++){
             slot = cols*line + j;
-            path = `./img/textures/`
-            var item = `${Items[slot].id.replace("minecraft:","")}`
-            if(!checkImage(`${path}${item}.png`)) item = "air";
+            item = `${Items[slot].id.replace("minecraft:","")}`
             cursor.append(`
-            <span class="grid" slot="${slot}"><img src="${path}${item}.png" alt=""></span>
+            <span class="grid" slot="${slot}"><img src="" alt=""></span>
             `)
+            changeSlotImg(slot, item)
         }
     }
 }
@@ -110,8 +109,6 @@ function refreshSlots(){
     Items.forEach((e) => {
         slot = Items.indexOf(e)
         item = `${e.id.replace("minecraft:","")}`
-        url = `./img/textures/${item}.png`;
-        if(!checkImage(url)) url.replace(item, "air")
-        $(`.grid[slot="${slot}"] > img`).attr("src", url)
+        changeSlotImg(slot, item)
     })
 }
