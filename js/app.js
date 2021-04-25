@@ -76,6 +76,11 @@ function load_pages(){
         if(element.parent().hasClass("active")) return console.log("Déjà actif");
         index = parseInt(element.attr("page"))
         activePage(index)
+        saveItems()
+        savePage()
+        Page = Pages[getIndexPage(index)]
+        Items = Page.items
+        refreshSlots()
     })
 }
 
