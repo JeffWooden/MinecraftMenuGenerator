@@ -124,6 +124,7 @@ function load_item(){
     $("#item-name").text(Item.id ? Item.id : Item.loottable); $("#item-slot").text(`Slot n°${Item.Slot}`);
     $("[option]").attr("disabled", false)
     options = ["id","Count","NBT"]
+    actions = [{recipe:"",state:true},{function:"",state:true},{close:false,state:false},{open:0,state:false}]
     defaults = ["minecraft:air",1,""]
     if(Item.loottable){
         $("[option='type']").val("loottable")
@@ -132,7 +133,27 @@ function load_item(){
         $("[option='type']").val("id")
     }
     for(i of options){
-        $(`[option="${i}"]`).val(Item[i] ? Item[i] : defaults[options.indexOf(i)])
+        $(`[option="${i == "loottable" ? "id" : i}"]`).val(Item[i] ? Item[i] : defaults[options.indexOf(i)])
+    }
+    for(action of actions){
+        for(i in action){
+            if(i == "state") continue;
+            switch(i){
+                case "recipe":
+                case "function":
+                case "close":
+                    if(i == "close" && $('[option="open_boolean"]').prop("checked")) Item.action[i] = false
+                    $(`[option="${i}"]`).val(Item.action[i].toString() ? Item.action[i].toString() : action[i])
+                    break;
+                case "open":
+                    $('[option="open_boolean"]').prop("checked",!(Item.action[i] < 0 || !Item.action[i]))
+                    $('[option="open"]').prop("disabled", Item.action[i] < 0 || !Item.action[i])
+                    $('[option="open"]').val(Item.action[i] < 0 || !Item.action[i] ? action[i] : Item.action[i])
+                    break
+                default:
+                    break;
+            }
+        }
     }
 }
 
