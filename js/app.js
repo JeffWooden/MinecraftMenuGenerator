@@ -105,6 +105,17 @@ function load_slots(){
             changeSlotImg(slot, item)
         }
     }
+    $(".slot").click((e) => {
+        element = $(e.currentTarget)
+        if(element.hasClass("active")){
+            element.removeClass("active")
+            menuState(false, true)
+            return;
+        }
+        $('.slot.active').removeClass("active")
+        element.addClass("active")
+        menuState(true, false)
+    })
 }
 
 function refreshSlots(){
