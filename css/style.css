@@ -41,7 +41,8 @@ a:hover { color: var(--medium-emphasis); }
 .btn.btn-validate {background-color: var(--green); border-color: var(--green);}
 .btn:hover { color: var(--medium-emphasis); }
 .input-group-text, .form-select.form-control { background-color: var(--three); border: 1px solid var(--three); color: var(--high-emphasis) }
-.form-control, .form-select { background-color: var(--five); border: 1px solid var(--four); color: var(--white-emphasis)}
+.form-control, .form-select, .form-control:disabled, .form-select:disabled { background-color: var(--five); border: 1px solid var(--four); color: var(--white-emphasis)}
+.form-control:disabled, .form-select:disabled {cursor: not-allowed;}
 .form-control:focus { background-color: var(--five); border: 1px solid var(--four); color: var(--white-emphasis)}
 
     /* Navbar */
@@ -72,6 +73,5 @@ nav { background-color: var(--two); color: var(--high-emphasis); }
 #page-selector .list-group-item { background-color: var(--four); color: var(--medium-emphasis)}
 #page-selector .list-group-item:hover { cursor: pointer;}
 #page-selector .list-group-item.active { background-color: var(--five); color: var(--high-emphasis); border: 1px solid var(--six)}
-
 
     /* Animations */
