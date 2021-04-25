@@ -127,6 +127,7 @@ function load_item(){
     defaults = ["minecraft:air",1,""]
     if(Item.loottable){
         $("[option='type']").val("loottable")
+        options[0] = "loottable"; defaults[0] = ""
     } else {
         $("[option='type']").val("id")
     }
