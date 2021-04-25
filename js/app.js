@@ -61,6 +61,7 @@ function load(){
     load_slots()
     $("#menu-name").text(Menu.name)
     $("[option]").attr("disabled", "true")
+    menuState(false, true)
 }
 
 function load_pages(){
@@ -81,6 +82,7 @@ function load_pages(){
         Page = Pages[getIndexPage(index)]
         Items = Page.items
         refreshSlots()
+        menuState(false, true); $('.slot.active').removeClass("active");
     })
 }
 

@@ -27,3 +27,8 @@ function changeSlotImg(slot,item){
     if(!checkImage(url)) url.replace(item, "air")
     $(`.grid[slot="${slot}"] > img`).attr("src", url)
 }
+
+function menuState(lower, noitem){
+    lower ? $("#lower").show() : $("#lower").hide();
+    noitem ? $("#no-item-loaded > h2").show() : $("#no-item-loaded > h2").hide()
+}
