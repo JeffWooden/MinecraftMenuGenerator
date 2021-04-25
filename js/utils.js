@@ -10,6 +10,10 @@ function activePage(index){
     $('a[action="select-page"][page=' + (index) + ']').parent().addClass("active")
 }
 
+function getIndexPage(index){
+    return Pages.indexOf(Pages.filter((e) => e.index == index)[0])
+}
+
 function savePage(){
     index = Pages.indexOf(Pages.filter((e) => e.index == Page.index)[0])
     Pages[index] = Page
