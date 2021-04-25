@@ -36,8 +36,8 @@ $(document).ready(() => {
         "-": "remove-page"
     }
     $(window).keydown(function(e){
-        e.preventDefault()
         if(!e.altKey || (e.altKey && e.key == "Alt")) return;
+        e.preventDefault();
         if(!shortcuts[e.key]) return console.log(`Raccourcis "Alt + ${e.key}" inconnu.`)
         $(`a[button=${shortcuts[e.key]}]`).click()
     })
