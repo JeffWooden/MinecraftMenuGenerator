@@ -32,9 +32,9 @@ function saveSlot(){
     SlotSaved = true;
 }
 
-function changeSlotImg(slot,item){
-    url = `./img/textures/${item}.png`;
-    if(!checkImage(url)) url.replace(item, "air")
+function changeSlotImg(slot,item,extension="png"){
+    url = `./img/textures/${item}.${extension}`;
+    if(!checkImage(url)) url.replace(item, "unknow").replace(extension, "png")
     $(`.grid[slot="${slot}"] > img`).attr("src", url)
 }
 

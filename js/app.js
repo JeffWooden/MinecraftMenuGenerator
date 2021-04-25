@@ -140,6 +140,6 @@ function refreshSlots(){
         slot = Items.indexOf(e)
         if(!e.id && !e.loottable) throw console.error(`Aucun "id" ou "loottable" n'a été donné dans Items[${slot}]: ${JSON.stringify(e)}`)
         item = e.id ? `${e.id.replace("minecraft:","")}` : `loottable`
-        changeSlotImg(slot, item)
+        changeSlotImg(slot, item, e.loottable ? "svg" : "png")
     })
 }
