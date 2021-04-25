@@ -14,6 +14,10 @@ function getIndexPage(index){
     return Pages.indexOf(Pages.filter((e) => e.index == index)[0])
 }
 
+function getIndexItem(index){
+    return Items.indexOf(Items.filter((e) => e.Slot == index)[0])
+}
+
 function savePage(){
     Pages[getIndexPage(Page.index)] = Page
 }
