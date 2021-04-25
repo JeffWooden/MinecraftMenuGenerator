@@ -98,7 +98,7 @@ function load_slots(){
             slot = cols*line + j;
             item = `${Items[slot].id.replace("minecraft:","")}`
             cursor.append(`
-            <span class="grid" slot="${slot}"><img src="" alt=""></span>
+            <span class="grid slot" slot="${slot}"><img src="" alt=""></span>
             `)
             changeSlotImg(slot, item)
         }
