@@ -18,7 +18,7 @@ $(document).ready(() => {
             case "save":
             case "export":
                 console.log("Menu")
-                break
+                break;
             default:
                 console.log("Default")
                 break
@@ -105,7 +105,7 @@ function load_slots(){
             changeSlotImg(slot, item)
         }
     }
-    $(".slot").click((e) => {
+    $(".slot").click((e) => { // Changement de slot
         element = $(e.currentTarget)
         if(element.hasClass("active")){
             element.removeClass("active")
