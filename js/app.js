@@ -37,8 +37,8 @@ $(document).ready(() => {
     }
     $(window).keydown(function(e){
         if(!e.altKey || (e.altKey && e.key == "Alt")) return;
+        if(!shortcuts[e.key]) return; // Raccourcis inconnu
         e.preventDefault();
-        if(!shortcuts[e.key]) return console.log(`Raccourcis "Alt + ${e.key}" inconnu.`)
         $(`a[button=${shortcuts[e.key]}]`).click()
     })
 
