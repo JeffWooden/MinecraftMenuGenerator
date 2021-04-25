@@ -100,3 +100,13 @@ function load_slots(){
         }
     }
 }
+
+function refreshSlots(){
+    Items.forEach((e) => {
+        slot = Items.indexOf(e)
+        item = `${e.id.replace("minecraft:","")}`
+        url = `./img/textures/${item}.png`;
+        if(!checkImage(url)) url.replace(item, "air")
+        $(`.grid[slot="${slot}"] > img`).attr("src", url)
+    })
+}
