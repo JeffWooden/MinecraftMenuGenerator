@@ -4,3 +4,8 @@ function checkImage(url) {
     image.onerror = () => { return false }
     image.src = url;
 }
+
+function activePage(index){
+    $('a[action="select-page"]').parent().removeClass("active")
+    $('a[action="select-page"][page=' + (index) + ']').parent().addClass("active")
+}
