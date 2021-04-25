@@ -44,6 +44,8 @@ a:hover { color: var(--medium-emphasis); }
 .form-control, .form-select, .form-control:disabled, .form-select:disabled { background-color: var(--five); border: 1px solid var(--four); color: var(--white-emphasis)}
 .form-control:disabled, .form-select:disabled {cursor: not-allowed;}
 .form-control:focus { background-color: var(--five); border: 1px solid var(--four); color: var(--white-emphasis)}
+.form-check-input { background-color: var(--medium-emphasis); border: 1px solid var(--high-emphasis)}
+.form-check-input:checked { background-color: var(--light-blue); border-color: var(--light-blue);}
 
     /* Navbar */
 nav { background-color: var(--two); color: var(--high-emphasis); }
