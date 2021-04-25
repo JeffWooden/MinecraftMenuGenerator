@@ -19,6 +19,10 @@ $(document).ready(() => {
             case "export":
                 console.log("Menu")
                 break;
+            case "save-item":
+                saveItems()
+                SlotSaved = true
+                break;
             default:
                 console.log("Default")
                 break
