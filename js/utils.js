@@ -15,8 +15,7 @@ function getIndexPage(index){
 }
 
 function savePage(){
-    index = getIndexPage(Page.index)
-    Pages[index] = Page
+    Pages[getIndexPage(Page.index)] = Page
 }
 
 function saveItems(){
