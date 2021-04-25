@@ -115,6 +115,8 @@ function load_slots(){
         $('.slot.active').removeClass("active")
         element.addClass("active")
         menuState(true, false)
+        Item = Items[getIndexItem(parseInt(element.attr("slot")))]
+        load_item()
     })
 }
 
