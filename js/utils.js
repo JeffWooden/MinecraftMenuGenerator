@@ -15,7 +15,7 @@ function getIndexPage(index){
 }
 
 function savePage(){
-    index = Pages.indexOf(Pages.filter((e) => e.index == Page.index)[0])
+    index = getIndexPage(Page.index)
     Pages[index] = Page
 }
 
